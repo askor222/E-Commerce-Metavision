@@ -55,3 +55,6 @@ Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3
 - Accesorios de movil.
 - Accesorios de ordenador.
 - Accesorios de metaverso.
+
+## Navegación basica de nuestro usuario
+<img src="img/ecomerceUML.png" width="100%">
