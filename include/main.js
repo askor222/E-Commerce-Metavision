@@ -80,3 +80,64 @@ setInterval(function(){
     Next();
 
 },5000);
+
+
+
+const myCheckbox = document.getElementById("myCheckbox");
+myCheckbox.addEventListener("click", function() {
+  if (myCheckbox.checked) {
+    // Checkbox está marcado
+    console.log("El checkbox está marcado");
+  } else {
+    // Checkbox no está marcado
+    console.log("El checkbox no está marcado");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+const dropdownButton = document.querySelector('.dropdown-button');
+const dropdownContent = document.querySelector('.dropdown-content');
+const dropdownOptions = dropdownContent.querySelectorAll('a');
+
+dropdownOptions.forEach((option) => {
+  option.addEventListener('click', () => {
+    dropdownButton.textContent = option.textContent;
+    dropdownContent.classList.remove('show');
+  });
+});
+
+dropdownButton.addEventListener('click', () => {
+  dropdownContent.classList.toggle('show');
+});
+
+
+
+
+
+const emailInput = document.getElementById('email-input');
+const sendButton = document.getElementById('send-button');
+
+function sendEmail() {
+  const emailAddress = emailInput.value;
+  // código para enviar el correo electrónico
+  console.log(`Enviando correo electrónico a: ${emailAddress}`);
+}
+
+emailInput.addEventListener('keyup', (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    sendEmail();
+  }
+});
+
+sendButton.addEventListener('click', sendEmail);
+
