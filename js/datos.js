@@ -1,4 +1,4 @@
-var category = ['telefonia', 'ordenador', 'metaverso', 'la maia'];
+var category = ['telefonia', 'ordenador', 'metaverso'];
 let products =
     [
         {
