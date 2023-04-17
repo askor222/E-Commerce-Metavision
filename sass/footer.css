@@ -5,13 +5,14 @@
 }
 
 body {
-  font-family: sans-serif;
-  text-transform: capitalize;
+  font-family: inter;
+  text-decoration: none;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #d9d9d9;
 }
 
 .footer {
@@ -36,7 +37,8 @@ body {
   font-weight: 500;
   border-bottom: 2px solid #d9d9d9;
   padding-bottom: 10px;
-  display: inline-block;
+  display: inline-block; /* BUSCAR SOLICION EN GRID PARA QUE SEA DOS COLUMNAS Y DOS FILAS */
+   text-decoration: none;
 }
 
 .footer ul li a {
@@ -44,11 +46,13 @@ body {
   color: #000000;
   display: block;
   margin-bottom: 15px;
+
 }
 
 .footer-links ul li a:hover {
   color: #000000;
   padding-left: 6px;
+  text-decoration: none;
 }
 
 .redes-sociales a {
