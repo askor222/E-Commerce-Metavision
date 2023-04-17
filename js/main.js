@@ -65,8 +65,8 @@ let params = new URLSearchParams(location.search);
         
         
         //let section = document.querySelector('section'); 
-        let section = document.getElementById("principal");
-        section.innerHTML = productos;
+       
+        cargar(productos);
         let selectCategory = document.getElementById("category");
         let buscador = document.getElementById("buscar");
 
@@ -98,7 +98,7 @@ let params = new URLSearchParams(location.search);
                 </div>`;
                 }
             });
-            section.innerHTML = productos;
+            cargar(productos);
         });
         // para el buscador por palabra clave
         buscador.addEventListener("keypress", function() {
@@ -144,7 +144,7 @@ let params = new URLSearchParams(location.search);
             </div>`;
 
             });
-            section.innerHTML = productos;
+            cargar(productos);
         });
         // para las imagenes
         document.querySelectorAll(".segunda").forEach((e) => {
@@ -153,3 +153,12 @@ let params = new URLSearchParams(location.search);
                     document.getElementById("imgprincipl").src = e.src;
                 });
             });
+
+function cargar(producto){
+
+    let section = document.getElementById("principal");
+    if (section !== null) {
+        section.innerHTML = producto;
+    }
+
+}

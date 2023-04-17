@@ -23,29 +23,54 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.menu-iz{
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    font-family: 'Oswald', sans-serif;;
-    i{
-        font-size: 25px;
-        padding: 5px;
-        margin-left: 5px;
+    .menu-iz{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-family: 'Oswald', sans-serif;;
+        i{
+            font-size: 25px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+        h1{    
+            margin-left: 35px;
+        }
     }
-    h1{    
-        margin-left: 35px;
-    }
-}
 
-.carrito{
-    i{
-        font-size: 25px;
-        margin: 8px;
-        margin-right: 10px;
+    a{
+        margin: 10px;
+        margin-right: 20px;
+
+        .carrito {
+            position: relative;
+            color: #212529;
+            font-size: 30px;
+            padding: 5px;
+            border-radius: 4px;
+           }
+             
+           .cartAmount {
+            position: absolute;
+            top: 17px;
+            right: 0px;
+            font-size: 13px;
+            background-color: red;
+            color: white;
+            padding: 9px;
+            border-radius: 50%;
+            width: 9px;
+            height: 9px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           }
+
     }
+      
+
 }
 
 .fondo-buscador{
@@ -78,6 +103,9 @@ header{
         font-size: 19px;
         display: flex;
         align-items: center;
+        text-decoration: none;
+        color: black;
+        margin-top: 2px;
 
             i{
                 font-size: 25px;
@@ -103,18 +131,18 @@ header{
 
         .div-2{
             margin-right: 15px;
+            text-decoration: none;
+            color: black;
+            margin-top: 2px;
         }
 
         .div-3{
             margin-right: 15px;
+            text-decoration: none;
+            color: black;
+            margin-top: 2px;
         }
     }
 
-
+/**/
 }
-
-
-
-
-
-

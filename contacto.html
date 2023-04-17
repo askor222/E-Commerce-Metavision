@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="sass/header.css">
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="sass/footer.css">
-    <link rel="stylesheet" href="sass/detalles.css">
+    <link rel="stylesheet" href="sass/formulario.css">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +43,7 @@
         </div>
 
         <div class="compartir">
-            <div class="compartir-iz">
-                <i class="fa fa-share-alt" aria-hidden="true"></i> Compartir
-            </div>
+            <div class="compartir-iz"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir</div>
             <div class="compartir-der">
                 <select name="category" id="category">
                     <option value="">Categoria</option>
@@ -55,8 +54,35 @@
         </div>
     </header>
     <main>
-        <section id="principal">
+        <section>
+            <form action=""  class="Formulario">
+                <h1 class="formulario__titulo">Formulario de Contacto</h1>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Nombre</label>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Correo</label>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Teléfono</label>
+                
 
+                <textarea class="mytext" rows="4"></textarea>
+                <label for="" class="formulario__label mylb">Comentarios</label>
+                <select id="selector"  name="selector" class="select">
+                <option value="">Seleccionar una opción</option>
+
+
+                    <option>mi primera pregunta</option>
+                    <option>mi segunda pregunta</option>
+                    <option>mi tercera pregunta</option>
+                </select>
+                 
+                
+                <label for="myCheckbox" class="myck"><input type="checkbox"
+                 id="myCheckbox" name="myCheckbox">Acepto las politicas de privacidad</label>   
+
+                <input type="submit" class="formulario__input">
+                <label for="" class="formulario__label"></label>
+            </form>
         </section>
     </main>
     <footer class="footer">
@@ -71,7 +97,7 @@
                     <ul>
                         <li><a href="#">Necesitas ayuda?</a></li>
                         <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="contacto.html">Contacta con nosotros</a></li>
+                        <li><a href="#">Contacta con nosotros</a></li>
                     </ul>
 
 

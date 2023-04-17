@@ -1,4 +1,5 @@
-var category = ['telefonia', 'ordenador', 'metaverso'];
+let carrito = [];
+let category = ['telefonia', 'ordenador', 'metaverso'];
 let products =
     [
         {
