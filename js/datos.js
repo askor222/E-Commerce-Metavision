@@ -153,7 +153,7 @@ let products =
             "id": 11,
             "category": "metaverso",
             "title": "HTC VIVE Pro 2 Gafas de Realidad Virtual + Controladores + SteamVR Base Station 2.0",
-            "price": 1299.90,
+            "price": 2349.90,
             "iva": 21,
             "description": "Producto compatible con MULTI-SISTEMAS • Asiento y respaldo acolchados, fabricados en símil de piel  PU. Construcción sólida y diseño ergonómico especialmente concebido para largas sesiones de juego. Cómodos reposabrazos acolchados, incluyendo un posavasos y bolsillo lateral. • Respaldo ajustable hasta 135 grados y reposapiés  extensible. Cojines lumbar y cervical incluidos. Giro 360º. • Base circular de 60cm con soportes fabricados en material suave. Soporte de 180mm para un peso de hasta 140kg.",
             "images": [
