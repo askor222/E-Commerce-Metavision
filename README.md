@@ -48,6 +48,11 @@ Herramientas:
 + [Proyecto Discord](https://discord.gg/EkuxQquM)
 
 #
+## Tecnología
+<img src="img/html-5.png" width="20%">
+<img src="img/css-3.png" width="25%">
+<img src="img/js.png" width="20%">
+
 ## Nombre de la tienda:
 # METAVISION
 
@@ -55,3 +60,6 @@ Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3
 - Accesorios de movil.
 - Accesorios de ordenador.
 - Accesorios de metaverso.
+
+## Navegación basica de nuestro usuario
+<img src="img/ecomerceUML.png" width="100%">
