@@ -8,8 +8,7 @@ main section .producto{
   border-radius: 10px;
 
   border: solid 1px grey;
-  width: 300px;
-  height: 400px;
+  width: 90%;
   padding: 20px;
   margin: 20px;
 }
@@ -26,7 +25,7 @@ main section .productoD{
 .imagen-producto {
     width: 100%;
     margin-bottom: 30px;
-
+  border-radius: 4px;
 }
 main section a{
   color: #000;

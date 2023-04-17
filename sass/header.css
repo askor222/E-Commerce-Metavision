@@ -82,9 +82,10 @@ header {
 .compartir {
   background-color: #D9D9D9;
   width: 100%;
-  height: 25px;
+  height: 36px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
   /**/
 }
 .compartir .compartir-iz {
@@ -105,14 +106,19 @@ header {
   display: flex;
   font-family: "Times New Roman", Times, serif;
   font-size: 19px;
+  align-items: center;
 }
 .compartir .compartir-der #categoria {
   font-family: "Times New Roman", Times, serif;
   font-size: 19px;
   margin-right: 14px;
 }
+.compartir .compartir-der #category {
+  margin-right: 14px;
+  font-size: 0.8em;
+}
 .compartir .compartir-der .div-2 {
-  margin-right: 15px;
+  margin-right: 14px;
   text-decoration: none;
   color: black;
   margin-top: 2px;
