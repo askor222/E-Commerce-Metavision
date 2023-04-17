@@ -7,27 +7,40 @@ let params = new URLSearchParams(location.search);
             products.forEach(item => {
                 if (item.id == idd) {
                     let imagen = "";
+                    let li="";
+                    let ul="";
                     console.log('Encontrado el: '+idd);
+                    let n = 1;
+                    imagen += `<img src="${item.images[0]}" alt="${item.title}" id="imgprincipl">`; 
                     item.images.forEach(img =>{
-                        imagen += '<img src="'+img+'" />';
-                        console.log("imagen: "+ img);
+                        if(n <= 3){
+                            
+                            li += `<img src="${img}" alt="${item.title}" id="a${n}" class="segunda">`;
+                            console.log("imagen: "+ img);
+                        }
+                        n +=1;
                     });
-                    productos = `<div>
-                                        <img src="${item.images[0]}" />
-                                        ${imagen}
-                                        <h2>${item.title}</h2>
-                                        <p>${item.description}</p>
-                                    </div>`;
-                        /*
-                    productos = '<div>'+
-                        '<img src="'+item.images[0]+'" />'+
-                        imagen +
-                        '<h2>'+item.title+'</h2>'+
-                        '<p>'+item.description+'</p>'+
-                        '</div>';
-                        */
+                    console.log(new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price));
+                    productos = `<div class="productoD">
+                            <div class="container1">
+                                ${imagen}
+                            </div>
+                                ${li}
+                            <div class="container2">
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                                <p class="precio">${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)}</p>
+                            </div>
+                        
+                            <div class="compra">
+                                <i class="fa fa-share-alt d" aria-hidden="true"></i>
+                                <i class="fa fa-shopping-bag d" aria-hidden="true" idd="${item.id}"></i>
+                            </div>
+                        </div>`;
+
                 }
             });
+            
         }else{
             // condicion default
             products.forEach(item => {
@@ -38,7 +51,7 @@ let params = new URLSearchParams(location.search);
                         <h3>${item.title}</h3>
                     </a>
                     <div class="compra">
-                        <p>${item.price} &euro;</p>
+                        <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
                         <a href="comprar.html?id=${item.id}">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         </a>
@@ -77,7 +90,7 @@ let params = new URLSearchParams(location.search);
                         <h3>${item.title}</h3>
                     </a>
                     <div class="compra">
-                        <p>${item.price} &euro;</p>
+                        <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
                         <a href="comprar.html?id=${item.id}">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         </a>
@@ -100,7 +113,7 @@ let params = new URLSearchParams(location.search);
                         <h3>${item.title}</h3>
                     </a>
                     <div class="compra">
-                        <p>${item.price} &euro;</p>
+                        <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
                         <a href="comprar.html?id=${item.id}">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         </a>
@@ -123,7 +136,7 @@ let params = new URLSearchParams(location.search);
                     <h3>${item.title}</h3>
                 </a>
                 <div class="compra">
-                    <p>${item.price} &euro;</p>
+                    <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
                     <a href="comprar.html?id=${item.id}">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                     </a>
@@ -133,3 +146,10 @@ let params = new URLSearchParams(location.search);
             });
             section.innerHTML = productos;
         });
+        // para las imagenes
+        document.querySelectorAll(".segunda").forEach((e) => {
+            e.addEventListener("click", () => {
+                    console.log("esto es lo que hace "+document.getElementById(e.id).src);
+                    document.getElementById("imgprincipl").src = e.src;
+                });
+            });
