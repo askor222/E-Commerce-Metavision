@@ -1,0 +1,22 @@
+
+  .segunda{
+    margin: 10px;
+    height: 90px;
+}
+.segunda:hover{
+    cursor: pointer;
+}
+#imgprincipl{
+    width: 100%;
+    border-radius: 10px;
+}
+.precio{
+    font-size: 2em;
+    text-align: end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.d{
+    font-size: 2em!important;
+}
+ 
