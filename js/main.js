@@ -52,9 +52,9 @@ let params = new URLSearchParams(location.search);
                     </a>
                     <div class="compra">
                         <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
-                        <a href="comprar.html?id=${item.id}">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                        </a>
+                        
+                            <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+
                     </div>
                 </div>`;
 
