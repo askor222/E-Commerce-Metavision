@@ -1,73 +1,51 @@
-const slider = document.querySelector("#slider");
-let sliderSection = document.querySelectorAll(".slider__section");
-let sliderSectionLast = sliderSection[sliderSection.length-1];
 
-
-const btnLeft = document.querySelector("#btn-left");
-const btnRight = document.querySelector("#btn-Right");
-
-function Next() {
-    let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0,5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-        slider.style.marginLeft = "-100%";   
-    }, 500);
-}
-function Prev() {
-    let sliderSection = document.querySelectorAll(".slider__section");
-    let sliderSectionLast = sliderSection[sliderSection.length-1];
-    slider.style.marginLeft = "0";
-    slider.style.transition = "all 0,5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement("afterbegin", sliderSectionFirst);
-        slider.style.marginLeft = "-100%";   
-    }, 500);
-}
-
-
-btnRight.addEventListener("clic", function(){
-    Next();
+/*window.addEventListener("load", function () {
+  console.log("el contenido ha cargado");
+  var imagenes = [];
+  imagenes[0] = "img/imagen4";
+  imagenes[1] = "img/imagen5";
+  imagenes[2] = "img/imagen6";
+  imagenes[3] = "img/imagen7";
+var indiceImagenes = 0;
+var tiempo = 2000;
+  function cambiarImagenes()
+  document.slider.src = imagenes[indiceimagenes];
+   if (indiceimagenes<3) {
+    indiceimagenes++;
+   } else {
+    indiceimagenes = 0;
+   }
+   cambiarimagenes();
+   setInterval(cambiarimagenes,tiempo);
 });
-btnLeft.addEventListener("clic", function(){
-    prev();
+*/
+
+
+
+
+document.querySelectorAll(".segunda").forEach((e)); {    
+e.addEventListener("click", ()=> {
+ // let principal = document.getElementById("principal");
+  //principal.setAttribute("src", "imag/js.pnp");
+  //principal.src = "img/js.pnp";
+  console.log("esto es lo que hace"+e.id.valueof);
+  document.getElementById("princapl").src =document.getElementById(e.id).src;
 });
-setInterval(function(){
-    Next();
-
-},5000);
- slider = document.querySelector("#slider");
- sliderSection = document.querySelectorAll(".slider__section");
- sliderSectionLast = sliderSection[sliderSection.length-1];
+};  
 
 
- btnLeft = document.querySelector("#btn-left");
- btnRight = document.querySelector("#btn-Right");
 
-function Next() {
-    let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0,5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-        slider.style.marginLeft = "-100%";   
-    }, 500);
-}
-function Prev() {
-    let sliderSection = document.querySelectorAll(".slider__section");
-    let sliderSectionLast = sliderSection[sliderSection.length-1];
-    slider.style.marginLeft = "0";
-    slider.style.transition = "all 0,5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement("afterbegin", sliderSectionFirst);
-        slider.style.marginLeft = "-100%";   
-    }, 500);
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 btnRight.addEventListener("clic", function(){
