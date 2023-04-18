@@ -11,6 +11,7 @@ if(localStorage.getItem("carrito") != null){
     }
     
 }
+
 obtenerDatosCarrito();
 function obtenerDatosCarrito(){
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
