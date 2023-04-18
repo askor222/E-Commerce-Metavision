@@ -11,6 +11,7 @@ document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         carrito.push(e.dataset.id);
         localStorage.setItem("carrito", JSON.stringify(carrito));
             console.log("click en "+e.id+" - "+ e.dataset.id);
+            obtenerCarrito(carritoCompra);
             //carrito.push(e.dataset.id);
             //console.log("mi cariito tiene " + carrito.length);
             
@@ -44,6 +45,10 @@ function obtenerCarrito(carritoCompa){
     if (listado !== null) {
         listado.innerHTML = listacarrito;
         totalC.innerHTML = `Total: ${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(totalComra)}`;
+        let seguir = document.getElementById("seguir");
+        seguir.addEventListener("click", () =>{
+            location.href ='index.html';
+        });
     }
-
+    
 }
