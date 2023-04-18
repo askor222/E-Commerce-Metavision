@@ -1,0 +1,35 @@
+#lista{
+    display: block;
+    border-radius: 10px;
+    border: solid 1px grey;
+    width: 100%;
+    padding: 5px;
+    margin: 20px;
+}
+.listaProducto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.listaProducto img{
+    height: 70px;
+}
+#total{
+    text-align: right;
+    font-size: 1.6em;
+
+}
+#finalizar, #seguir{
+    background: white;
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: solid 1px grey;
+    padding: 10px;
+    color: grey;
+}
+.descripLista{
+    width: 150px;
+}

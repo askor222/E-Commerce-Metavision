@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="sass/header.css">
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="sass/footer.css">
-    <link rel="stylesheet" href="sass/listado_compra.css">
+    <link rel="stylesheet" href="sass/detalles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,9 @@
         </div>
 
         <div class="compartir">
-            <div class="compartir-iz"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir</div>
+            <div class="compartir-iz">
+                <i class="fa fa-share-alt" aria-hidden="true"></i> Compartir
+            </div>
             <div class="compartir-der">
                 <select name="category" id="category">
                     <option value="">Categoria</option>
@@ -53,27 +55,8 @@
         </div>
     </header>
     <main>
-        <section>
-            <div id="lista">
-                <div id="listacompra">
-                    <!-- para el listado del carrito-->
-                    <div class="listaProducto"> 
-                        <div><img src="img/css-3.png"></div>
-                        <div>Descripción</div>
-                        <div>Precio</div>
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    </div>
-                </div>
-                
-                
-                
-                <div id="total">
-                    Total: 0,10€
-                </div>
-                <button id="finalizar">Tramitar pedido</button>
-                <button id="seguir">Continuar comprando</button>
-            </div>
-           
+        <section id="principal">
+
         </section>
     </main>
     <footer class="footer">
@@ -135,21 +118,5 @@
     <script src="js/datos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carrito.js"></script>
-    
-    <script>
-document.querySelectorAll(".fa-trash-o").forEach((e) => {
-    e.addEventListener("click", () => {
-        carrito.removeItem(e.dataset.id);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-            console.log("click en "+e.id+" - "+ e.dataset.id);
-            //carrito.push(e.dataset.id);
-            //console.log("mi cariito tiene " + carrito.length);
-            
-           
-        });
-    });
-
-    </script>
-
 </body>
 </html>

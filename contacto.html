@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="sass/header.css">
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="sass/footer.css">
-    <link rel="stylesheet" href="sass/listado_compra.css">
+    <link rel="stylesheet" href="sass/formulario.css">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,26 +55,34 @@
     </header>
     <main>
         <section>
-            <div id="lista">
-                <div id="listacompra">
-                    <!-- para el listado del carrito-->
-                    <div class="listaProducto"> 
-                        <div><img src="img/css-3.png"></div>
-                        <div>Descripción</div>
-                        <div>Precio</div>
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    </div>
-                </div>
+            <form action=""  class="Formulario">
+                <h1 class="formulario__titulo">Formulario de Contacto</h1>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Nombre</label>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Correo</label>
+                <input type="text" class="formulario__input">
+                <label for="" class="formulario__label">Teléfono</label>
                 
+
+                <textarea class="mytext" rows="4"></textarea>
+                <label for="" class="formulario__label mylb">Comentarios</label>
+                <select id="selector"  name="selector" class="select">
+                <option value="">Seleccionar una opción</option>
+
+
+                    <option>mi primera pregunta</option>
+                    <option>mi segunda pregunta</option>
+                    <option>mi tercera pregunta</option>
+                </select>
+                 
                 
-                
-                <div id="total">
-                    Total: 0,10€
-                </div>
-                <button id="finalizar">Tramitar pedido</button>
-                <button id="seguir">Continuar comprando</button>
-            </div>
-           
+                <label for="myCheckbox" class="myck"><input type="checkbox"
+                 id="myCheckbox" name="myCheckbox">Acepto las politicas de privacidad</label>   
+
+                <input type="submit" class="formulario__input">
+                <label for="" class="formulario__label"></label>
+            </form>
         </section>
     </main>
     <footer class="footer">
@@ -88,7 +97,7 @@
                     <ul>
                         <li><a href="#">Necesitas ayuda?</a></li>
                         <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="contacto.html">Contacta con nosotros</a></li>
+                        <li><a href="#">Contacta con nosotros</a></li>
                     </ul>
 
 
@@ -135,21 +144,5 @@
     <script src="js/datos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/carrito.js"></script>
-    
-    <script>
-document.querySelectorAll(".fa-trash-o").forEach((e) => {
-    e.addEventListener("click", () => {
-        carrito.removeItem(e.dataset.id);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-            console.log("click en "+e.id+" - "+ e.dataset.id);
-            //carrito.push(e.dataset.id);
-            //console.log("mi cariito tiene " + carrito.length);
-            
-           
-        });
-    });
-
-    </script>
-
 </body>
 </html>
