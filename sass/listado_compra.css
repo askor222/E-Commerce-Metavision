@@ -1,4 +1,4 @@
-.lista{
+#lista{
     display: block;
     border-radius: 10px;
     border: solid 1px grey;
@@ -16,7 +16,7 @@
 .listaProducto img{
     height: 70px;
 }
-.total{
+#total{
     text-align: right;
     font-size: 1.6em;
 
@@ -29,4 +29,7 @@
     border: solid 1px grey;
     padding: 10px;
     color: grey;
+}
+.descripLista{
+    width: 150px;
 }

@@ -37,7 +37,7 @@ let params = new URLSearchParams(location.search);
                                 <i class="fa fa-shopping-bag d" aria-hidden="true" idd="${item.id}"></i>
                             </div>
                         </div>`;
-
+                    document.title = item.title;
                 }
             });
             
@@ -52,9 +52,9 @@ let params = new URLSearchParams(location.search);
                     </a>
                     <div class="compra">
                         <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} &euro;</p>
-                        <a href="comprar.html?id=${item.id}">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                        </a>
+                        
+                            <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+
                     </div>
                 </div>`;
 
@@ -121,7 +121,7 @@ let params = new URLSearchParams(location.search);
                 </div>`;
                 }
             });
-            section.innerHTML = productos;
+            cargar(productos);
         });
         let precio = document.getElementById("precio");
         precio.addEventListener("click", function() {
@@ -155,7 +155,7 @@ let params = new URLSearchParams(location.search);
             });
 
 function cargar(producto){
-
+//
     let section = document.getElementById("principal");
     if (section !== null) {
         section.innerHTML = producto;
