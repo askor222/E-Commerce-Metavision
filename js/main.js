@@ -37,7 +37,7 @@ let params = new URLSearchParams(location.search);
                                 <i class="fa fa-shopping-bag d" aria-hidden="true" idd="${item.id}"></i>
                             </div>
                         </div>`;
-
+                    document.title = item.title;
                 }
             });
             
@@ -121,7 +121,7 @@ let params = new URLSearchParams(location.search);
                 </div>`;
                 }
             });
-            section.innerHTML = productos;
+            cargar(productos);
         });
         let precio = document.getElementById("precio");
         precio.addEventListener("click", function() {
@@ -155,7 +155,7 @@ let params = new URLSearchParams(location.search);
             });
 
 function cargar(producto){
-
+//
     let section = document.getElementById("principal");
     if (section !== null) {
         section.innerHTML = producto;
