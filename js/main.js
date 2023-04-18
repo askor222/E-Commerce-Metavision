@@ -78,9 +78,12 @@ let params = new URLSearchParams(location.search);
             el.value = opt;
             selectCategory.appendChild(el);
         }
+
         // para el selector de categoria
         selectCategory.addEventListener("change", function() {
-            
+            if(selectCategory.value == ""){
+                location.href = "index.html"
+            }
             if(nombrepagina() != "index.html"){
                 location.href ='index.html';
             }
