@@ -13,6 +13,7 @@
     text-align: center;
     margin: 10px;
     color: rgba(0,0,0,0.7);
+    font-size: 1.6em;
   }
   .formulario__input, .formulario__label, 
   .formulario__submit, .mytext, .mysl,  .select {
@@ -27,7 +28,7 @@
   input[type="number"]:valid + .formulario__label,
   input[type="email"]:valid + .formulario__label{
     margin-top: -88px!important;
-    color: rgb(13, 172, 39);
+    color: #37c471;
   }
   
   .formulario__input, .mytext {
@@ -45,7 +46,7 @@
   }
   textarea:valid + .mylb{
     margin-top: -150px!important;
-    color: rgb(13, 172, 39);
+    color: #37c471;
   }
   .mytext:focus + .mylb {
     margin-top: -150px!important;
@@ -97,3 +98,82 @@
   .mycheckbox {
     margin-top: 40px;
   }
+  .formulario__submit {
+    background: rgba(0,0,0,0.7); 
+    color: white;
+    padding: 10px 10px;
+    cursor: pointer;
+    border: none;
+}
+.containerpago {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+    
+.imagen-tarjetas {
+    overflow: clip;
+    height: 75px; 
+
+}
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type="radio"][id^="cb"] {
+  display: none;
+}
+
+.seleP {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.seleP:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.seleP img {
+  height: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+input[type="radio"]:checked + label {
+  border-color: #37c471;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "✓";
+  background-color: #37c471;
+  transform: scale(1);
+}
+
+input[type="radio"]:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
