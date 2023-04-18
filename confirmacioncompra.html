@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="sass/header.css">
     <link rel="stylesheet" href="sass/main.css">
     <link rel="stylesheet" href="sass/footer.css">
-    <link rel="stylesheet" href="sass/formulario.css">
+    <link rel="stylesheet" href="sass/confirmacion.css">
     
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="sass/font-awesome.min.css">
-    <title>Tienda de accesorios para telefonia, ordenador y metaverso</title>
+    <title>Tienda de accesorios para telefonia, ordenador y metaverso. Confirmación de proceso de compra</title>
 </head>
 <body>
     <header>
@@ -55,32 +55,12 @@
     </header>
     <main>
         <section>
-            <form action="confirmacioncontacto.html"  class="Formulario">
-                <h1 class="formulario__titulo">Formulario de Contacto</h1>
-                <input type="text" class="formulario__input" required>
-                <label for="" class="formulario__label">Nombre</label>
-                <input type="email" class="formulario__input" required>
-                <label for="" class="formulario__label">Correo</label>
-                <input type="number" maxlength="9" pattern="\d{10}" class="formulario__input" required>
-                <label for="" class="formulario__label">Teléfono</label>
-                
-
-                <textarea class="mytext" rows="4" required></textarea>
-                <label for="" class="formulario__label mylb">Comentarios</label>
-                <select id="selector"  name="selector" class="select">
-                    <option value="">Seleccionar una opción</option>
-                    <option>mi primera pregunta</option>
-                    <option>mi segunda pregunta</option>
-                    <option>mi tercera pregunta</option>
-                </select>
-                 
-                
-                <label for="myCheckbox" class="myck"><input type="checkbox"
-                 id="myCheckbox" name="myCheckbox">Acepto las politicas de privacidad</label>   
-
-                <input type="submit" class="formulario__input">
-                <label for="" class="formulario__label"></label>
-            </form>
+            <div class="confirmarcompra">
+                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                <p>   Felicidades tu pedido se <br>
+                    ha realizado correctamente
+                </p>
+            </div>          
         </section>
     </main>
     <footer class="footer">
@@ -95,7 +75,7 @@
                     <ul>
                         <li><a href="#">Necesitas ayuda?</a></li>
                         <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="#">Contacta con nosotros</a></li>
+                        <li><a href="contacto.html">Contacta con nosotros</a></li>
                     </ul>
 
 
