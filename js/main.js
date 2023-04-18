@@ -87,6 +87,7 @@ let params = new URLSearchParams(location.search);
             if(nombrepagina() != "index.html"){
                 location.href ='index.html';
             }
+            
             categoria = selectCategory.value;
             productos = "";
             products.forEach(item => {
@@ -98,12 +99,13 @@ let params = new URLSearchParams(location.search);
                     </a>
                     <div class="compra">
                         <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)}</p>
-                        <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-bag" data-id="${item.id}" id="ca${item.id}" aria-hidden="true"></i>
                     </div>
                 </div>`;
                 }
             });
             cargar(productos);
+            obtenerDatosCarrito();
         });
         // para el buscador por palabra clave
         buscador.addEventListener("keypress", function() {
@@ -128,6 +130,7 @@ let params = new URLSearchParams(location.search);
                 }
             });
             cargar(productos);
+            obtenerDatosCarrito();
         });
         let precio = document.getElementById("precio");
         precio.addEventListener("click", function() {
@@ -152,6 +155,7 @@ let params = new URLSearchParams(location.search);
 
             });
             cargar(productos);
+            obtenerDatosCarrito();
         });
         // para las imagenes
         document.querySelectorAll(".segunda").forEach((e) => {
