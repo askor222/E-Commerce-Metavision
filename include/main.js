@@ -1,28 +1,3 @@
-
-/*window.addEventListener("load", function () {
-  console.log("el contenido ha cargado");
-  var imagenes = [];
-  imagenes[0] = "img/imagen4";
-  imagenes[1] = "img/imagen5";
-  imagenes[2] = "img/imagen6";
-  imagenes[3] = "img/imagen7";
-var indiceImagenes = 0;
-var tiempo = 2000;
-  function cambiarImagenes()
-  document.slider.src = imagenes[indiceimagenes];
-   if (indiceimagenes<3) {
-    indiceimagenes++;
-   } else {
-    indiceimagenes = 0;
-   }
-   cambiarimagenes();
-   setInterval(cambiarimagenes,tiempo);
-});
-*/
-
-
-
-
 document.querySelectorAll(".segunda").forEach((e)); {    
 e.addEventListener("click", ()=> {
  // let principal = document.getElementById("principal");
@@ -33,31 +8,6 @@ e.addEventListener("click", ()=> {
 });
 };  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-btnRight.addEventListener("clic", function(){
-    Next();
-});
-btnLeft.addEventListener("clic", function(){
-    prev();
-});
-setInterval(function(){
-    Next();
-
-},5000);
 
 
 
@@ -119,3 +69,17 @@ emailInput.addEventListener('keyup', (event) => {
 
 sendButton.addEventListener('click', sendEmail);
 
+
+
+
+
+var inputs = document.getElementsByClassName("formulario__input");
+for (var i =0; i<inputs.length; i++) {
+  inputs[i].addEventListener("keyup", function() {                                      
+  if(this.value.length>=1) {
+    this.nextElementSibling.classList.add("fijar");
+  } else {
+    this.nextElementSibling.classList.remove("fijar");
+  }
+  });
+}
