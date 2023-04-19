@@ -139,9 +139,10 @@
     <script>
 document.querySelectorAll(".fa-trash-o").forEach((e) => {
     e.addEventListener("click", () => {
-        carrito.removeItem(e.dataset.id);
+        //carrito.removeItem(e.dataset.id);
+        carrito.splice(e.id,1);
         localStorage.setItem("carrito", JSON.stringify(carrito));
-            console.log("click en "+e.id+" - "+ e.dataset.id);
+            console.log("click en "+e.id+"cartId"+ e.dataset.id);
             //carrito.push(e.dataset.id);
             //console.log("mi cariito tiene " + carrito.length);
             
