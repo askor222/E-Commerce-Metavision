@@ -21,7 +21,7 @@
     width:100%;
     font-size: 1.3em;
     margin-bottom: 20px;
-    font-weight: bold;
+
    
   } 
   input[type="text"]:valid + .formulario__label,
@@ -43,6 +43,7 @@
   .formulario__input:focus + 
   .formulario__label {
     margin-top: -88px!important;
+    color: black;
   }
   textarea:valid + .mylb{
     margin-top: -150px!important;
@@ -60,7 +61,7 @@
     position: absolute;
     margin-top: -55px;
     z-index: -20;
-    color: rgba(0,0,0,0.8);
+    color: rgb(0 0 0 / 22%);
     transition: all 0.2s;
   } 
   .formulario__submit {
