@@ -15,7 +15,7 @@ let products =
                 "img/productos/1_c.avif"
             ],
             "fem":true,
-            "ofert":true
+            "ofert":false
         },
         {
             "id": 2,
@@ -45,7 +45,7 @@ let products =
                 "img/productos/3_b.webp"
             ],
             "fem":true,
-            "ofert":true
+            "ofert":false
         },
         {
             "id": 4,
@@ -90,7 +90,7 @@ let products =
                 "img/productos/6_c.avif"
             ],
             "fem":true,
-            "ofert":true
+            "ofert":false
         },
         {
             "id": 7,
@@ -164,7 +164,7 @@ let products =
 
             ],
             "fem":true,
-            "ofert":true
+            "ofert":false
         },
         {
             "id": 12,
