@@ -10,89 +10,85 @@ body {
     text-decoration: none;
 }
 
-.container {
-    display: grid;
-    max-width: 1200px;
-    margin: 0;
+.footer-main {
+    width: 100%;
     background-color: #d9d9d9;
-    grid-auto-flow: row;
-    grid-auto-flow: column;
-    justify-content: space-around;
-}
 
-.footer {
-    
-    padding: 80px 0;
-    grid-template-columns: 1fr 1fr;
-}
-
-.footer-row {
-    grid-auto-flow: row;
-    flex-wrap: wrap;
-    background-color: #d9d9d9;
-}
-
-.footer-links {
-    width: 25%;
-    padding: 0 15px;
-}
-
-.footer-links h4 {
-    font-size: 20px;
-    color: #0000;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #d9d9d9;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    text-decoration: none;
-}
-
-.footer ul li a {
-    font-size: 20px;
-    color: #000000;
-    display: block;
-    margin-bottom: 15px;
-    text-decoration: none;
-    
-}
-
-.footer-links ul li a:hover {
-    color: #000000;
-    padding-left: 6px;
-    text-decoration: none;
-}
-
-.redes-sociales a {
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
-    background-color: #d9d9d9;
-    margin: 0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50px;
-    color:#000000;
-   
-}
-
-
-.redes-rociales a:hover {
-    background-color: #ffffff;
-}
-
-
-@media(max-width:991px) {
     .footer-row {
-        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        padding: 20px;
+        h4{
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    
+        li{
+            list-style: none;
+            text-align: center;
+            margin: 7px 0;
+    
+            a{
+                color: black;
+                text-decoration: none;
+            }
+        }
+    
     }
 
-    .footer-links {
+    .copyright{
         width: 100%;
-        margin-bottom: 30px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes-sociales{
+        font-size: 46px;
+        color: black;
+        display: flex;
+        justify-content: center;
+
+        .instagram-logo{
+            color: black;
+            margin-right: 5px;
+        }
+
+        .facebook-logo{
+            color: black;
+            margin-right: 5px;
+        }
+
+        .twitter-logo{
+            color: black;
+        }
     }
 }
+
+
+
+
+@media (max-width:550px) {
+    .footer-main {
+        .footer-row {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }   
+}
+
+@media (max-width:350px) {
+    .footer-main {
+        .footer-row {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+    }   
+}
+
+
 
 

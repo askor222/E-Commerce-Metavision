@@ -54,33 +54,37 @@
         </div>
     </header>
     <main>
+        <style>
+
+        </style>
         <section>
-            <form action="confirmacioncontacto.html"  class="Formulario">
-                <h1 class="formulario__titulo">Formulario de Contacto</h1>
-                <input type="text" class="formulario__input" required>
-                <label for="" class="formulario__label">Nombre</label>
-                <input type="email" class="formulario__input" required>
-                <label for="" class="formulario__label">Correo</label>
-                <input type="number" maxlength="9" pattern="\d{10}" class="formulario__input" required>
-                <label for="" class="formulario__label">Teléfono</label>
-                
+            <form action="confirmacioncompra.html"  class="validar un envio">
+                <h2 class="formulario__titulo">Elige tu dirección</h2>
+            <input type="text" class="formulario__input" required>
+            <label for="text"  class="formulario__label">Dirección de envio</label>
+            <input type="text" class="formulario__input" required>
+            <label for="" class="formulario__label">País</label>
+            <input type="text" class="formulario__input" required>
+            <label for="" class="formulario__label">Localidad</label>
+            <input type="text" class="formulario__input" required>
+            <label for="" class="formulario__label">Código postal</label>
+            <h2 class="formulario__titulo">Elige el metodo de pago</h2>
+            <div class="containerpago">
+                <ul>
+                    <li>
+                        <input type="radio" id="cb1" name="selectorpago" required>
+                        <label class="seleP" for="cb1"><img src="img/VISA.jpg" /></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="cb2" name="selectorpago" />
+                        <label class="seleP" for="cb2"><img src="img/paypal2.png" /></label>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="formulario__titulo" id="total">Total a pagar:  180,00€</h3>
 
-                <textarea class="mytext" rows="4" required></textarea>
-                <label for="" class="formulario__label mylb">Comentarios</label>
-                <select id="selector"  name="selector" class="select">
-                    <option value="">Seleccionar una opción</option>
-                    <option>mi primera pregunta</option>
-                    <option>mi segunda pregunta</option>
-                    <option>mi tercera pregunta</option>
-                </select>
-                 
-                
-                <label for="myCheckbox" class="myck"><input type="checkbox"
-                 id="myCheckbox" name="myCheckbox">Acepto las politicas de privacidad</label>   
-
-                <input type="submit" class="formulario__input">
-                <label for="" class="formulario__label"></label>
-            </form>
+            <input type="submit" class="formulario__input">
+            <label for="" class="formulario__label"></label>
         </section>
     </main>
     <footer>
