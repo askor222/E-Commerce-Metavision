@@ -48,8 +48,20 @@
                 <select name="category" id="category">
                     <option value="">Categoria</option>
                 </select>
-                <div id="ofertas" class="div-2">Ofertas</div>
-                <div id="precio" class="div-3">Precio</div>
+                <div id="ofertas" class="div-2">
+                    <div>
+                        <a accesskey="2" id="palabras" class="hexagono pres" title="Jugar a palabras">
+                            <span class="hexagono-content">
+                                <i class="fa fa-percent" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div id="precio" class="div-3">
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
     </header>
@@ -83,7 +95,7 @@
             </div>
             <h3 class="formulario__titulo" id="total">Total a pagar:  180,00€</h3>
 
-            <input type="submit" class="formulario__input">
+            <input type="submit" id="confirmar" class="formulario__input">
             <label for="" class="formulario__label"></label>
         </section>
     </main>

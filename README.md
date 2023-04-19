@@ -5,11 +5,13 @@ Equipo:
 + Developer:
     * Nacyla. 
     * Juan carlos.
-#
+<img src="img/img_equipo.jpg" width="20%">
+
 Temporacización:
  + Inicio: 10/04/2023
  + Sprint: 14/04/2023
  + Entrega: 20/04/2023
+ 
 #
 ### Contexto del proyecto
 DEBE:
