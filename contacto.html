@@ -27,7 +27,7 @@
                 </a>
             </div>
 
-            <a href="">
+            <a href="listadocarrito.html">
                 <div class="carrito">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <div id="cartId" class="cartAmount">0</div>
@@ -48,29 +48,36 @@
                 <select name="category" id="category">
                     <option value="">Categoria</option>
                 </select>
-                <div id="ofertas" class="div-2">Ofertas</div>
-                <div id="precio" class="div-3">Precio</div>
+                <div id="ofertas" class="div-2">
+                    <div>
+                        <a accesskey="2" id="palabras" class="hexagono pres" title="Jugar a palabras">
+                            <span class="hexagono-content">
+                                <i class="fa fa-percent" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
             </div>
         </div>
     </header>
     <main>
         <section>
-            <form action=""  class="Formulario">
+            <form action="confirmacioncontacto.html"  class="Formulario">
                 <h1 class="formulario__titulo">Formulario de Contacto</h1>
-                <input type="text" class="formulario__input">
+                <input type="text" class="formulario__input" required>
                 <label for="" class="formulario__label">Nombre</label>
-                <input type="text" class="formulario__input">
+                <input type="email" class="formulario__input" required>
                 <label for="" class="formulario__label">Correo</label>
-                <input type="text" class="formulario__input">
+                <input type="number" maxlength="9" pattern="\d{10}" class="formulario__input" required>
                 <label for="" class="formulario__label">Teléfono</label>
                 
 
-                <textarea class="mytext" rows="4"></textarea>
+                <textarea class="mytext" rows="4" required></textarea>
                 <label for="" class="formulario__label mylb">Comentarios</label>
                 <select id="selector"  name="selector" class="select">
-                <option value="">Seleccionar una opción</option>
-
-
+                    <option value="">Seleccionar una opción</option>
                     <option>mi primera pregunta</option>
                     <option>mi segunda pregunta</option>
                     <option>mi tercera pregunta</option>
@@ -85,9 +92,8 @@
             </form>
         </section>
     </main>
-    <footer class="footer">
-
-        <div class="container">
+    <footer>
+        <div class="footer-main">
 
             <div class="footer-row">
 
@@ -97,7 +103,7 @@
                     <ul>
                         <li><a href="#">Necesitas ayuda?</a></li>
                         <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="#">Contacta con nosotros</a></li>
+                        <li><a href="contacto.html">Contacta con nosotros</a></li>
                     </ul>
 
 
@@ -113,12 +119,10 @@
                         <li><a href="#">tarjeta regalo</a></li>
                     </ul>
 
-
                 </div>
 
                 <div class="footer-links">
-
-                    <h4>Nuestra Empresa</h4>
+                    <h4>Sobre Empresa</h4>
                     <ul>
                         <li><a href="#">Quienes somos?</a></li>
                         <li><a href="#">Marcas</a></li>
@@ -130,18 +134,24 @@
                 </div>
 
                 <div class="footer-links"> 
-                    
                     <h4>Redes sociales</h4>
-                    <div class="social-link">
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-
+                    <div class="redes-sociales">
+                        <a href="#" class="instagram-logo"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="facebook-logo"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#" class="twitter-logo"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                     </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="footer-bottom">
+                <p>Copyright 2023 @ Todo los derechos reservados.</p>
             </div>
         </div>
     </footer>
     <script src="js/datos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 </html>

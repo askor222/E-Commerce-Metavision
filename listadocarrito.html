@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/header.css">
+    <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="sass/footer.css">
+    <link rel="stylesheet" href="sass/listado_compra.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="sass/font-awesome.min.css">
+    <title>Tienda de accesorios para telefonia, ordenador y metaverso</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu-iz">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <a href="index.html">
+                    <h1>MetaVisión</h1>
+                </a>
+            </div>
+
+            <a href="listadocarrito.html">
+                <div class="carrito">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div id="cartId" class="cartAmount">0</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="fondo-buscador">
+            <div class="buscador">
+                <input  type="text" id="buscar" name="buscar" placeholder="buscar tu producto">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="compartir">
+            <div class="compartir-iz"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir</div>
+            <div class="compartir-der">
+                <select name="category" id="category">
+                    <option value="">Categoria</option>
+                </select>
+                <div id="ofertas" class="div-2">
+                    <div>
+                        <a accesskey="2" id="palabras" class="hexagono pres" title="Jugar a palabras">
+                            <span class="hexagono-content">
+                                <i class="fa fa-percent" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div id="lista">
+                <div id="listacompra">
+                    <!-- para el listado del carrito-->
+                    <div class="listaProducto"> 
+                        <div><img src="img/css-3.png"></div>
+                        <div>Descripción</div>
+                        <div>Precio</div>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                
+                
+                <div id="total">
+                    Total: 0,10€
+                </div>
+                <button id="finalizar">Tramitar pedido</button>
+                <button id="seguir">Continuar comprando</button>
+            </div>
+           
+        </section>
+    </main>
+    <footer>
+        <div class="footer-main">
+
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Necesitas ayuda?</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                        <li><a href="contacto.html">Contacta con nosotros</a></li>
+                    </ul>
+
+
+                </div>
+
+                <div class="footer-links"> 
+
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Financiación</a></li>
+                        <li><a href="#">Reparaciones</a></li>
+                        <li><a href="#">Tipos de envíos</a></li>
+                        <li><a href="#">tarjeta regalo</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer-links">
+                    <h4>Sobre Empresa</h4>
+                    <ul>
+                        <li><a href="#">Quienes somos?</a></li>
+                        <li><a href="#">Marcas</a></li>
+                        <li><a href="#">Tecnologías inmersivas</a></li>
+                        <li><a href="#">Accesibilidad</a></li>
+                    </ul>
+
+
+                </div>
+
+                <div class="footer-links"> 
+                    <h4>Redes sociales</h4>
+                    <div class="redes-sociales">
+                        <a href="#" class="instagram-logo"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="facebook-logo"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#" class="twitter-logo"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="footer-bottom">
+                <p>Copyright 2023 @ Todo los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/datos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
+    
+    <script>
+document.querySelectorAll(".fa-trash-o").forEach((e) => {
+    e.addEventListener("click", () => {
+        //carrito.removeItem(e.dataset.id);
+        carrito.splice(e.id,1);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+            console.log("click en "+e.id+"cartId"+ e.dataset.id);
+            //carrito.push(e.dataset.id);
+            //console.log("mi cariito tiene " + carrito.length);
+            
+           
+        });
+    });
+
+    </script>
+
+</body>
+</html>
