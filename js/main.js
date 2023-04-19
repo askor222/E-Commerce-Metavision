@@ -132,7 +132,7 @@ let params = new URLSearchParams(location.search);
                     <p>No hemos encontrado ningún producto</p>
                     
                 </div>`;
-                break;
+                
                 }
             });
             cargar(productos);
