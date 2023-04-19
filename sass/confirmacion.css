@@ -1,0 +1,20 @@
+.confirmar, .confirmarcompra{
+    display: block;
+    border-radius: 10px;
+    border: solid 1px grey;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.6em;
+}
+.confirmarcompra {
+    text-align: center;
+}
+.confirmarcompra i{
+    font-size: 10em;
+    color: green;
+}
+.confirmarcompra p{
+    font-size: 1.6em;
+    font-weight: bold;
+}
