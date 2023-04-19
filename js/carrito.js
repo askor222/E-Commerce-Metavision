@@ -16,15 +16,25 @@ function iniciar(){
 }
 obtenerDatosCarrito();
 function obtenerDatosCarrito(){
+    
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
             carrito.push(e.dataset.id);
-            localStorage.setItem("carrito", JSON.stringify(carrito));
+            let mostrar = document.getElementById("anidad");
+            mostrar.style.display = "block";
+
+                localStorage.setItem("carrito", JSON.stringify(carrito));
                 console.log("click en "+e.id+" - "+ e.dataset.id);
                 obtenerCarrito(carritoCompra);
                 //carrito.push(e.dataset.id);
                 //console.log("mi cariito tiene " + carrito.length);
+
+                setTimeout(() => {
+                    mostrar.style.display = "none"
+                }, 3000);
             });
+            
+
         });
         document.querySelectorAll(".fa-trash-o").forEach((e) => {
             e.addEventListener("click", () => {
