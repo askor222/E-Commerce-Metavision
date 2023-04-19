@@ -127,16 +127,16 @@ let params = new URLSearchParams(location.search);
                         <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
                     </div>
                 </div>`;
-                } else{
-                    productos += `<div class="producto">
-                    <p>No hemos encontrado ningún producto</p>
-                    
-                </div>`;
-                
-                }
+                } 
             });
+
+            if(productos === ""){
+                productos='<div class="productoD">no lo tenemos</div>';
+            }
             cargar(productos);
             obtenerDatosCarrito();
+
+           
         });
         // de menos a mayor
         let menos = document.getElementById("down");
