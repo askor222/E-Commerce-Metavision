@@ -179,4 +179,33 @@ function nombrepagina(){
     var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
     var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
     return rutaRelativa;  
-}
+} 
+
+let oferta= document.getElementById("ofertas");
+oferta.addEventListener("click", function() {
+    if(nombrepagina() != "index.html"){
+        location.href ='index.html';
+    }
+    productos = "";
+
+    console.log("he hecho click en ofertas")
+    products.forEach(item => {
+        if(item.ofert === true) {
+            productos += `<div class="producto">
+            <a href="detalles.html?id=${item.id}">
+                <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
+                <h3>${item.title}</h3>
+            </a>
+            <div class="compra">
+                <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
+                <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+            </div>
+        </div>`;
+         }
+
+   
+
+    });
+    cargar(productos);
+    obtenerDatosCarrito();
+});
