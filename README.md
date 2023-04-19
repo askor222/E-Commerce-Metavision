@@ -5,8 +5,6 @@ Equipo:
 + Developer:
     * Nacyla. 
     * Juan carlos.
-
-
 <img src="img/IMG_4432.JPG" width="20%">
 
 Temporacización:
