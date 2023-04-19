@@ -1,4 +1,5 @@
 let params = new URLSearchParams(location.search);
+
         let idd;
         let productos = "";
         // condicion para los detalles
@@ -24,18 +25,20 @@ let params = new URLSearchParams(location.search);
                     productos = `<div class="productoD">
                             <div class="container1">
                                 ${imagen}
+                                <div>${li}</div>
                             </div>
-                                ${li}
+                                
                             <div class="container2">
                                 <h3>${item.title}</h3>
                                 <p>${item.description}</p>
                                 <p class="precio">${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)}</p>
+                                <div class="compra acceso">
+                                    <i class="fa fa-share-alt d" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+                                </div>
                             </div>
                         
-                            <div class="compra">
-                                <i class="fa fa-share-alt d" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
-                            </div>
+                            
                         </div>`;
                     document.title = item.title;
                 }
@@ -185,19 +188,20 @@ let params = new URLSearchParams(location.search);
             obtenerDatosCarrito();
         });
        
-        // para las imagenes
-        document.querySelectorAll(".segunda").forEach((e) => {
-            e.addEventListener("click", () => {
-                    console.log("esto es lo que hace "+document.getElementById(e.id).src);
-                    document.getElementById("imgprincipl").src = e.src;
-                });
-            });
+
 
 function cargar(producto){
 // cargar en contenido
     let section = document.getElementById("principal");
     if (section !== null) {
         section.innerHTML = producto;
+                // para las imagenes
+                document.querySelectorAll(".segunda").forEach((e) => {
+                    e.addEventListener("click", () => {
+                            console.log("esto es lo que hace "+document.getElementById(e.id).src);
+                            document.getElementById("imgprincipl").src = e.src;
+                        });
+                    });
     }
 
 }

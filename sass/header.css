@@ -134,6 +134,45 @@ header {
   margin-top: 2px;
 }
 
+#anidad {
+  font-size: 1.2em;
+  background: #37c471;
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  color: antiquewhite;
+  box-shadow: 1px 0px 10px #9E9E9E;
+  text-align: center;
+  justify-content: center;
+  animation: mostrarS 1s ease-out;
+}
+
+@keyframes mostrar {
+  from {
+    height: 0px;
+    padding: 0px;
+    display: block;
+  }
+  to {
+    padding: 20px;
+    height: 80px;
+  }
+}
+@keyframes mostrarS {
+  from {
+    height: 0px;
+    padding: 0px;
+    display: block;
+  }
+  to {
+    padding: 20px;
+    height: 60px;
+  }
+}
 .hexagono {
   position: relative;
   display: block;
@@ -199,6 +238,10 @@ header {
   display: block;
 }
 
+#lista p {
+  margin: 0 30px;
+}
+
 @media screen and (min-width: 768px) {
   body {
     max-width: 1024px;
@@ -215,7 +258,47 @@ header {
   main section .producto {
     width: 300px !important;
   }
+  main section .productoD {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  main section .container1 {
+    margin: 30px;
+  }
+  main section .container2 {
+    margin: 10px;
+  }
+  main #principal .acceso {
+    margin-top: 219px !important;
+  }
+  .compra {
+    font-size: 1.4em !important;
+  }
+  .container2 h3 {
+    margin: 6px 0;
+  }
+  .container2 p {
+    line-height: 2em;
+  }
+  main #principal .compra .fa-shopping-bag {
+    font-size: 1.6em !important;
+  }
   .fa:hover {
     cursor: pointer;
+  }
+  #anidad {
+    font-size: 2em;
+    background: #37c471;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 1024px;
+    height: 80px;
+    padding: 20px;
+    color: antiquewhite;
+    box-shadow: 1px 0px 10px #9E9E9E;
+    text-align: center;
+    animation: mostrar 1s ease-out;
   }
 }/*# sourceMappingURL=header.css.map */
