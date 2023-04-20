@@ -117,6 +117,7 @@ let params = new URLSearchParams(location.search);
                     <a href="detalles.html?id=${item.id}">
                         <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
                         <h3>${item.title}</h3>
+                        
                     </a>
                     <div class="compra">
                         <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
