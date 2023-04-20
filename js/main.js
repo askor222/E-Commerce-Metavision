@@ -128,7 +128,7 @@ let params = new URLSearchParams(location.search);
                 } 
             });
             if(productos === ""){
-                productos='<div class="productoD">no lo tenemos</div>';
+                productos='<div class="productoD">No hemos encontrado el producto</div>';
             }
             cargar(productos);
             obtenerDatosCarrito();
@@ -190,11 +190,6 @@ let params = new URLSearchParams(location.search);
             });
         }
 
-            cargar(productos);
-            obtenerDatosCarrito();
-        });
-
-  
 
 
 function cargar(producto){

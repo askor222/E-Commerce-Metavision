@@ -28,8 +28,6 @@ function obtenerDatosCarrito(){
             mostrar.style.display = "block";
             localStorage.setItem("carrito", JSON.stringify(carrito));
 
-            let mostrar = document.getElementById("anidad");
-            mostrar.style.display = "block";
 
                 localStorage.setItem("carrito", JSON.stringify(carrito));
 
