@@ -74,7 +74,7 @@ Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3
 - Accesorios de ordenador.
 - Accesorios de metaverso.
 
-## Navegación basica de nuestro usuario
+## Navegación básica de nuestro usuario UML (Lenguaje Unificado de Modelado; Unified Modeling Language)
 
 <div>
 <p style = 'text-align:center;'>
