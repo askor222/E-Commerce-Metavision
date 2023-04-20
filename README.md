@@ -5,7 +5,13 @@ Equipo:
 + Developer:
     * Nacyla. 
     * Juan carlos.
-<img src="img/img_equipo.jpg" width="20%">
+<br>
+<div>
+<p style = 'text-align:center;'>
+<img src="img/img_equipo.jpg">
+</p>
+</div>
+
 
 Temporacización:
  + Inicio: 10/04/2023
@@ -51,9 +57,14 @@ Herramientas:
 
 #
 ## Tecnología
+<div>
+<p style = 'text-align:center;'>
 <img src="img/html-5.png" width="20%">
 <img src="img/css-3.png" width="25%">
 <img src="img/js.png" width="20%">
+</p>
+</div>
+
 
 ## Nombre de la tienda:
 # METAVISION
@@ -64,4 +75,10 @@ Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3
 - Accesorios de metaverso.
 
 ## Navegación basica de nuestro usuario
-<img src="img/ecomerceUML.png" width="100%">
+
+<div>
+<p style = 'text-align:center;'>
+<img src="img/ecomerceUML.png">
+</p>
+</div>
+
