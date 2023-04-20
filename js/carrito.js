@@ -11,10 +11,7 @@ function iniciar(){
     carritoCompra.innerHTML="0";
     let lista = document.getElementById("lista");
     if(lista !== null){
-        lista.innerHTML = '<img class="imagen-carrito" src="img/foto-carrito.jpg">'+
-        '<h2 class="titulo-carrito">Tu carrito esta vacio</h2>'+
-        '<p class="p-carrito"> ¡Explora nuestro catalogo! </p>'+
-        '<a href="index.html"><button class="button-carrito">Ver productos</button></a>';
+        lista.innerHTML = "<p>Tu carrico esta vacio</p>";
     }
 }
 obtenerDatosCarrito();
@@ -22,17 +19,11 @@ function obtenerDatosCarrito(){
     
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
-            let mostrar = document.getElementById("anidad");
             carrito.push(e.dataset.id);
-
-            mostrar.style.display = "block";
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-
             let mostrar = document.getElementById("anidad");
             mostrar.style.display = "block";
 
                 localStorage.setItem("carrito", JSON.stringify(carrito));
-
                 console.log("click en "+e.id+" - "+ e.dataset.id);
                 obtenerCarrito(carritoCompra);
                 //carrito.push(e.dataset.id);
@@ -47,12 +38,9 @@ function obtenerDatosCarrito(){
         });
         document.querySelectorAll(".fa-trash-o").forEach((e) => {
             e.addEventListener("click", () => {
-                
-                console.log("click en "+e.id+"cartId "+ e.dataset.id);
                 carrito.splice(e.dataset.id,1);
-
                 localStorage.setItem("carrito", JSON.stringify(carrito));
-                carrito = JSON.parse(localStorage.getItem("carrito"));
+                    console.log("click en "+e.id+"cartId"+ e.dataset.id);
                     obtenerCarrito(carritoCompra);
                     obtenerDatosCarrito();
                     //carrito.push(e.dataset.id);
@@ -61,11 +49,7 @@ function obtenerDatosCarrito(){
                    
                 });
             });
-            let confirmar = document.getElementById("confirmar");
-            if(confirmar != null){
-                confirmar.addEventListener("click", ()=> {localStorage.clear();})
-            }
-        
+        document.getElementById("confirmar").addEventListener("click", ()=> {localStorage.clear();})
 }
 
 function obtenerCarrito(carritoCompa){
@@ -93,7 +77,7 @@ function obtenerCarrito(carritoCompa){
                 }
             });
             localStorage.setItem("total", totalComra);
-            //console.log("la lista es: "+listacarrito);
+            console.log("la lista es: "+listacarrito);
         }
     }
     
