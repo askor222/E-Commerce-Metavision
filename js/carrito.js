@@ -21,19 +21,27 @@ obtenerDatosCarrito();
 function obtenerDatosCarrito(){
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
+            let mostrar = document.getElementById("anidad");
             carrito.push(e.dataset.id);
+            mostrar.style.display = "block";
             localStorage.setItem("carrito", JSON.stringify(carrito));
                 console.log("click en "+e.id+" - "+ e.dataset.id);
                 obtenerCarrito(carritoCompra);
                 //carrito.push(e.dataset.id);
                 //console.log("mi cariito tiene " + carrito.length);
+                setTimeout(() => {
+                    mostrar.style.display = "none"
+                }, 3000);
             });
         });
         document.querySelectorAll(".fa-trash-o").forEach((e) => {
             e.addEventListener("click", () => {
+                
+                console.log("click en "+e.id+"cartId "+ e.dataset.id);
                 carrito.splice(e.dataset.id,1);
+
                 localStorage.setItem("carrito", JSON.stringify(carrito));
-                    console.log("click en "+e.id+"cartId"+ e.dataset.id);
+                carrito = JSON.parse(localStorage.getItem("carrito"));
                     obtenerCarrito(carritoCompra);
                     obtenerDatosCarrito();
                     //carrito.push(e.dataset.id);
@@ -42,7 +50,11 @@ function obtenerDatosCarrito(){
                    
                 });
             });
-        document.getElementById("confirmar").addEventListener("click", ()=> {localStorage.clear();})
+            let confirmar = document.getElementById("confirmar");
+            if(confirmar != null){
+                confirmar.addEventListener("click", ()=> {localStorage.clear();})
+            }
+        
 }
 
 function obtenerCarrito(carritoCompa){
@@ -70,7 +82,7 @@ function obtenerCarrito(carritoCompa){
                 }
             });
             localStorage.setItem("total", totalComra);
-            console.log("la lista es: "+listacarrito);
+            //console.log("la lista es: "+listacarrito);
         }
     }
     
