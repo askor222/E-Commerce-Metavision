@@ -57,9 +57,6 @@ let params = new URLSearchParams(location.search);
 
                     </div>
                 </div>`;
-
-
-
         });
         }
         

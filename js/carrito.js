@@ -11,7 +11,10 @@ function iniciar(){
     carritoCompra.innerHTML="0";
     let lista = document.getElementById("lista");
     if(lista !== null){
-        lista.innerHTML = "<p>Tu carrico esta vacio</p>";
+        lista.innerHTML = '<img class="imagen-carrito" src="img/foto-carrito.jpg">'+
+        '<h2 class="titulo-carrito">Tu carrito esta vacio</h2>'+
+        '<p class="p-carrito"> ¡Explora nuestro catalogo! </p>'+
+        '<a href="index.html"><button class="button-carrito">Ver productos</button></a>';
     }
 }
 obtenerDatosCarrito();
