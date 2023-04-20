@@ -1,4 +1,4 @@
-# ecomerce-equipo2
+# Metavisión
 Equipo:
 + Scrum master: Kibria.
 + Product owner: Gabriela.
