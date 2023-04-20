@@ -91,6 +91,9 @@ left: 10px;
 .sliter__btn--right {
     right: 10px;
 }
+#lista p{
+  margin: 0 30px;
+}
 /* grid */
   .square {
     width: 100px;

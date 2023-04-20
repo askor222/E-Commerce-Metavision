@@ -1,4 +1,5 @@
 let params = new URLSearchParams(location.search);
+
         let idd;
         let productos = "";
         // condicion para los detalles
@@ -130,6 +131,8 @@ let params = new URLSearchParams(location.search);
             }
             cargar(productos);
             obtenerDatosCarrito();
+
+           
         });
         // de menos a mayor
         let menos = document.getElementById("down");
@@ -186,7 +189,11 @@ let params = new URLSearchParams(location.search);
             });
         }
 
-       
+            cargar(productos);
+            obtenerDatosCarrito();
+        });
+
+  
 
 
 function cargar(producto){
@@ -194,6 +201,13 @@ function cargar(producto){
     let section = document.getElementById("principal");
     if (section !== null) {
         section.innerHTML = producto;
+                // para las imagenes
+                document.querySelectorAll(".segunda").forEach((e) => {
+                    e.addEventListener("click", () => {
+                            console.log("esto es lo que hace "+document.getElementById(e.id).src);
+                            document.getElementById("imgprincipl").src = e.src;
+                        });
+                    });
     }
             // para las imagenes
             document.querySelectorAll(".segunda").forEach((e) => {
