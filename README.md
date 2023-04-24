@@ -1,11 +1,17 @@
-# ecomerce-equipo2
+# Metavisión
 Equipo:
 + Scrum master: Kibria.
 + Product owner: Gabriela.
 + Developer:
     * Nacyla. 
     * Juan carlos.
-<img src="img/img_equipo.jpg" width="20%">
+<br>
+<div>
+<p style = 'text-align:center;'>
+<img src="img/img_equipo.jpg">
+</p>
+</div>
+
 
 Temporacización:
  + Inicio: 10/04/2023
@@ -51,9 +57,15 @@ Herramientas:
 
 #
 ## Tecnología
+<div>
+<p style = 'text-align:center;'>
 <img src="img/html-5.png" width="20%">
 <img src="img/css-3.png" width="25%">
 <img src="img/js.png" width="20%">
+<img src="img/node-sass.svg" width="20%">
+</p>
+</div>
+
 
 ## Nombre de la tienda:
 # METAVISION
@@ -63,5 +75,11 @@ Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3
 - Accesorios de ordenador.
 - Accesorios de metaverso.
 
-## Navegación basica de nuestro usuario
-<img src="img/ecomerceUML.png" width="100%">
+## Navegación básica de nuestro usuario UML (Lenguaje Unificado de Modelado; Unified Modeling Language)
+
+<div>
+<p style = 'text-align:center;'>
+<img src="img/ecomerceUML.png">
+</p>
+</div>
+

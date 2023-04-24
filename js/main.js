@@ -124,6 +124,7 @@ let params = new URLSearchParams(location.search);
                     <a href="detalles.html?id=${item.id}">
                         <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
                         <h3>${item.title}</h3>
+                        
                     </a>
                     <div class="compra">
                         <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
@@ -134,7 +135,7 @@ let params = new URLSearchParams(location.search);
             });
 
             if(productos === ""){
-                productos='<div class="productoD">no lo tenemos</div>';
+                productos='<div class="productoD">No hemos encontrado el producto</div>';
             }
             cargar(productos);
             obtenerDatosCarrito();
@@ -152,48 +153,10 @@ let params = new URLSearchParams(location.search);
             products.sort((a, b) => a.price - b.price);
             products.forEach(item => {
 
-                productos += `<div class="producto">
-                <a href="detalles.html?id=${item.id}">
-                    <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
-                    <h3>${item.title}</h3>
-                </a>
-                <div class="compra">
-                    <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
-                    <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
-                </div>
-            </div>`;
+<<<<<<< version2
+=======
 
-            });
-            cargar(productos);
-            obtenerDatosCarrito();
-        });
-        // de mayor a menos
-        let mayor = document.getElementById("up");
-        mayor.addEventListener("click", function() {
-            if(nombrepagina() != "index.html"){
-                location.href ='index.html';
-            }
-            productos = "";
-
-            products.sort((a, b) => b.price - a.price);
-            products.forEach(item => {
-
-                productos += `<div class="producto">
-                <a href="detalles.html?id=${item.id}">
-                    <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
-                    <h3>${item.title}</h3>
-                </a>
-                <div class="compra">
-                    <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
-                    <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
-                </div>
-            </div>`;
-
-            });
-            cargar(productos);
-            obtenerDatosCarrito();
-        });
-       
+>>>>>>> main
 
 
 function cargar(producto){

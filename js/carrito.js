@@ -20,8 +20,14 @@ function obtenerDatosCarrito(){
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
             carrito.push(e.dataset.id);
-            let mostrar = document.getElementById("anidad");
+<<<<<<< version2
+
             mostrar.style.display = "block";
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+=======
+
+>>>>>>> main
 
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 console.log("click en "+e.id+" - "+ e.dataset.id);
