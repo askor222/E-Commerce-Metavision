@@ -27,7 +27,6 @@ let params = new URLSearchParams(location.search);
                                 ${imagen}
                                 <div>${li}</div>
                             </div>
-                                
                             <div class="container2">
                                 <h3>${item.title}</h3>
                                 <p>${item.description}</p>
@@ -37,8 +36,6 @@ let params = new URLSearchParams(location.search);
                                     <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
                                 </div>
                             </div>
-                        
-                            
                         </div>`;
                     document.title = item.title;
                 }
@@ -60,9 +57,6 @@ let params = new URLSearchParams(location.search);
 
                     </div>
                 </div>`;
-
-
-
         });
         }
         
@@ -133,7 +127,6 @@ let params = new URLSearchParams(location.search);
                 </div>`;
                 } 
             });
-
             if(productos === ""){
                 productos='<div class="productoD">No hemos encontrado el producto</div>';
             }
@@ -144,19 +137,59 @@ let params = new URLSearchParams(location.search);
         });
         // de menos a mayor
         let menos = document.getElementById("down");
-        menos.addEventListener("click", function() {
-            if(nombrepagina() != "index.html"){
-                location.href ='index.html';
-            }
-            productos = "";
+        if(menos != null){
+            menos.addEventListener("click", function() {
+                if(nombrepagina() != "index.html"){
+                    location.href ='index.html';
+                }
+                productos = "";
+    
+                products.sort((a, b) => a.price - b.price);
+                products.forEach(item => {
+    
+                    productos += `<div class="producto">
+                    <a href="detalles.html?id=${item.id}">
+                        <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
+                        <h3>${item.title}</h3>
+                    </a>
+                    <div class="compra">
+                        <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
+                        <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+                    </div>
+                </div>`;
+    
+                });
+                cargar(productos);
+                obtenerDatosCarrito();
+            });
+            // de mayor a menos
+            let mayor = document.getElementById("up");
+            mayor.addEventListener("click", function() {
+                if(nombrepagina() != "index.html"){
+                    location.href ='index.html';
+                }
+                productos = "";
+    
+                products.sort((a, b) => b.price - a.price);
+                products.forEach(item => {
+    
+                    productos += `<div class="producto">
+                    <a href="detalles.html?id=${item.id}">
+                        <img src="${item.images[0]}" alt="${item.title}" class="imagen-producto">
+                        <h3>${item.title}</h3>
+                    </a>
+                    <div class="compra">
+                        <p>${new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(item.price)} </p>
+                        <i class="fa fa-shopping-bag" data-id="${item.id}" id="c${item.id}" aria-hidden="true"></i>
+                    </div>
+                </div>`;
+    
+                });
+                cargar(productos);
+                obtenerDatosCarrito();
+            });
+        }
 
-            products.sort((a, b) => a.price - b.price);
-            products.forEach(item => {
-
-<<<<<<< version2
-=======
-
->>>>>>> main
 
 
 function cargar(producto){
@@ -172,6 +205,13 @@ function cargar(producto){
                         });
                     });
     }
+            // para las imagenes
+            document.querySelectorAll(".segunda").forEach((e) => {
+                e.addEventListener("click", () => {
+                        console.log("esto es lo que hace "+document.getElementById(e.id).src);
+                        document.getElementById("imgprincipl").src = e.src;
+                    });
+                });
 
 }
 function nombrepagina(){

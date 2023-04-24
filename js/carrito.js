@@ -11,25 +11,26 @@ function iniciar(){
     carritoCompra.innerHTML="0";
     let lista = document.getElementById("lista");
     if(lista !== null){
-        lista.innerHTML = "<p>Tu carrico esta vacio</p>";
+        lista.innerHTML = '<img class="imagen-carrito" src="img/foto-carrito.jpg">'+
+        '<h2 class="titulo-carrito">Tu carrito esta vacio</h2>'+
+        '<p class="p-carrito"> ¡Explora nuestro catalogo! </p>'+
+        '<a href="index.html"><button class="button-carrito">Ver productos</button></a>';
     }
 }
 obtenerDatosCarrito();
 function obtenerDatosCarrito(){
-    // carrito
+    
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
+            let mostrar = document.getElementById("anidad");
             carrito.push(e.dataset.id);
-<<<<<<< version2
 
             mostrar.style.display = "block";
             localStorage.setItem("carrito", JSON.stringify(carrito));
 
-=======
-
->>>>>>> main
 
                 localStorage.setItem("carrito", JSON.stringify(carrito));
+
                 console.log("click en "+e.id+" - "+ e.dataset.id);
                 obtenerCarrito(carritoCompra);
                 //carrito.push(e.dataset.id);
@@ -44,9 +45,12 @@ function obtenerDatosCarrito(){
         });
         document.querySelectorAll(".fa-trash-o").forEach((e) => {
             e.addEventListener("click", () => {
+                
+                console.log("click en "+e.id+"cartId "+ e.dataset.id);
                 carrito.splice(e.dataset.id,1);
+
                 localStorage.setItem("carrito", JSON.stringify(carrito));
-                    console.log("click en "+e.id+"cartId"+ e.dataset.id);
+                carrito = JSON.parse(localStorage.getItem("carrito"));
                     obtenerCarrito(carritoCompra);
                     obtenerDatosCarrito();
                     //carrito.push(e.dataset.id);
@@ -55,7 +59,11 @@ function obtenerDatosCarrito(){
                    
                 });
             });
-        document.getElementById("confirmar").addEventListener("click", ()=> {localStorage.clear();})
+            let confirmar = document.getElementById("confirmar");
+            if(confirmar != null){
+                confirmar.addEventListener("click", ()=> {localStorage.clear();})
+            }
+        
 }
 
 function obtenerCarrito(carritoCompa){
@@ -83,7 +91,7 @@ function obtenerCarrito(carritoCompa){
                 }
             });
             localStorage.setItem("total", totalComra);
-            console.log("la lista es: "+listacarrito);
+            //console.log("la lista es: "+listacarrito);
         }
     }
     
