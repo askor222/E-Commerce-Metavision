@@ -19,7 +19,7 @@ function iniciar(){
 }
 obtenerDatosCarrito();
 function obtenerDatosCarrito(){
-    
+    // carrito
     document.querySelectorAll(".fa-shopping-bag").forEach((e) => {
         e.addEventListener("click", () => {
             let mostrar = document.getElementById("anidad");
