@@ -49,9 +49,10 @@ Tools:
 <img src="img/html-5.png" width="20%">
 <img src="img/css-3.png" width="25%">
 <img src="img/js.png" width="20%">
-<img src="img/node-sass.svg" width="20%">
+<img src="img/sass.png" width="20%">
 </p>
 </div>
+
 
 ## Team:
 + Scrum master: Kibria.
