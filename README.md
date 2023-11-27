@@ -1,64 +1,51 @@
-# Metavisión
-Equipo:
-+ Scrum master: Kibria.
-+ Product owner: Gabriela.
-+ Developer:
-    * Nacyla. 
-    * Juan carlos.
-<br>
-<div>
-<p style = 'text-align:center;'>
-<img src="img/img_equipo.jpg">
-</p>
-</div>
+# E-Commerce-Metavision
+![Main Photo](./img/foto-principal.PNG)
 
-
-Temporacización:
- + Inicio: 10/04/2023
+Timeline:
+ + Start: 10/04/2023
  + Sprint: 14/04/2023
- + Entrega: 20/04/2023
+ + Delivery: 20/04/2023
  
 #
-### Contexto del proyecto
-DEBE:
-* Plantear la marca y los productos a vender (Benchmark)
-* Buscar referencias de usabilidad y de diseño (paletas de colores y fuentes)
-* Realizar mockups y wireframes.
-* Definir las historias de usuario y tareas que necesitamos realizar y priorizarlas
-* Tener una sección de productos, una de carrito de compra y un formulario de contacto.
-* Incluir imágenes en los elementos que sea necesario (en formatos apropiados).
-* Ser responsive para mobile y desktop, especificar resoluciones elegidas en cada caso.
-* Utilización de Sass (variables y Mixing)
-
+### Project Requirements:
+MUST:
+* Define the brand and products to be sold (Benchmark).
+* Search for usability and design references (color palettes and fonts).
+* Create mockups and wireframes.
+* Define user stories and tasks that need to be done and prioritize them.
+* Have a product section, a shopping cart, and a contact form.
+* Include images where necessary (in appropriate formats).
+* Be responsive for both mobile and desktop, specify chosen resolutions in each case.
+* Utilize Sass (variables and mixing).
 
 EXTRAS:
-* Que el correo del formulario se mande a una dirección electrónica
-* Local storage
+* Have the form email sent to an email address.
+* Implement local storage.
 
-Criterios de rendimiento
-● Entregables
-● Revisar los criterios de auditoría.
-● Pautas de presentación final de trabajo.
-● Criterios de buenas prácticas.
-● Utilización del Trello e implementación de metodologías ágiles.
+Performance Criteria:
+* Deliverables.
+* Review audit criteria.
+* Final work presentation guidelines.
+* Good practice criteria.
+* Use of Trello and implementation of agile methodologies.
 
-Entregables
-* Enlace a repositorio GitHub con Readme.
-* Diseños en Figma.
-* Trello de trabajo en equipo.
-* Presentación final.
+Deliverables:
+* Link to GitHub repository with Readme.
+* Designs in Figma.
+* Teamwork Trello board.
+* Final presentation.
 #
 
 
-Herramientas:
-+ [Proyecto Trello]( https://trello.com/invite/b/TXdfSsz7/ATTI414792cbc863d03575bd16aedb0cfdf892C51AC4/ecomerce-equipo2)
-+ [Proyecto Figma](https://www.figma.com/file/RnrP135gVGz8RTjcJ2VmP8/Untitled?node-id=0%3A1&t=HzzENDDmIrjSxk9n-1)
-+ [Proyecto Discord](https://discord.gg/EkuxQquM)
+Tools:
++ [Trello Project](https://trello.com/invite/b/TXdfSsz7/ATTI414792cbc863d03575bd16aedb0cfdf892C51AC4/ecomerce-equipo2)
++ [Figma Project](https://www.figma.com/file/RnrP135gVGz8RTjcJ2VmP8/Untitled?node-id=0%3A1&t=HzzENDDmIrjSxk9n-1)
++ [Discord Project](https://discord.gg/EkuxQquM)
 
 #
-## Tecnología
+## Technology
 <div>
-<p style = 'text-align:center;'>
+<p style='text-align:center;'>
 <img src="img/html-5.png" width="20%">
 <img src="img/css-3.png" width="25%">
 <img src="img/js.png" width="20%">
@@ -66,20 +53,29 @@ Herramientas:
 </p>
 </div>
 
+## Team:
++ Scrum master: Kibria.
++ Product owner: Gabriela.
++ Developers:
+    * Nacyla.
+    * Juan Carlos.
+<br>
+<div>
+    <p style='text-align:center;'>
+    <img src="img/img_equipo.jpg">
+    </p>
+</div>
 
-## Nombre de la tienda:
-# METAVISION
 
-Objetivo: tienda online para vender accesorios electrónicos, nos enfocamos en 3 sectores especifico:
-- Accesorios de movil.
-- Accesorios de ordenador.
-- Accesorios de metaverso.
+Objective: An online store for selling electronic accessories, focusing on three specific sectors:
+- Mobile accessories.
+- Computer accessories.
+- Metaverse accessories.
 
-## Navegación básica de nuestro usuario UML (Lenguaje Unificado de Modelado; Unified Modeling Language)
+## Basic User Navigation UML (Unified Modeling Language)
 
 <div>
-<p style = 'text-align:center;'>
+<p style='text-align:center;'>
 <img src="img/ecomerceUML.png">
 </p>
 </div>
-
